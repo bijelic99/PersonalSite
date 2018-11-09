@@ -1,0 +1,246 @@
+
+html, body {
+
+    
+    background-color: #5652e1;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #2a1868;
+    
+    
+}
+.navbar-custom {
+    
+    background-color: transparent;
+    border-bottom-color: white !important;
+    border-bottom-width: 0.2vh !important;
+    
+}
+
+.navbar-brand{
+    color: black;
+    font-size: 6vh;
+    font-weight: bolder;
+    
+}
+.navbar-nav>li>a{
+    color: black;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+.navbar-nav>li>.active{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+
+.cover, .about, .projects-carousel-section, .contact-me-section{
+    
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.cover{
+    height: 100vh;
+    background-image: url("../pictures/duotone.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+.v-cent{
+    display: block;
+    height: 25%;
+}
+.v-cent-m{
+    display: block;
+    height: 50%;
+}
+.padding-center{
+    padding: 70px 0;
+    
+}
+.welcome-msg{
+    font-size: 4rem;
+    font-weight: bolder;
+}
+.mg-h-center{
+    margin-right: auto;
+    margin-left: auto;
+}
+.arrow-down{
+    
+    font-size: 6rem;
+    color: white;
+}
+.about{
+    background-image: url("../pictures/line.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    
+}
+@media screen and (max-width: 991px) {
+    .about {
+      background-image: none;
+    }
+    .arrow-down{
+        padding-top: 8vh;
+    }
+  }
+
+
+.navbar-toggle{
+    color: white;
+    
+}
+.description{
+
+    /*text-align: left;*/
+    color: white;
+    height: 64%;
+    
+    
+}
+.description-container{
+    
+    padding-top: 10%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: top;
+    
+    
+    
+}
+
+.h-100{
+    height:  100%;
+}
+.h-100vh{
+    height:  100vh;
+}
+.display-block{
+    display: block;
+}
+.mg-t-b-auto{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.social-container{
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+    height: 64%;
+    
+}
+
+.pic-container{
+    flex:4;
+    
+}
+.about_empty_flex{
+    flex:2;
+}
+.social {
+    flex: 8;
+    font-size: 1.4em;
+    font-weight: unset;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+    
+}
+.no-br{
+    white-space: nowrap;
+}
+.social-fl{
+    flex: 1;
+}
+.profile-pic{
+    width: 16vw;
+    height: 16vw;
+    background-image: url("../pictures/profile-pic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.18vw;
+}
+.white-text, .social, .description{
+    color: white;
+}
+.bold-text, .social, .description{
+    font-weight: bolder;
+}
+.social-container-container{
+
+    padding-top: 10%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: top;
+}
+.projects-carousel-section{
+    height: 100vh;
+    
+}
+#project-carousel>.carousel-inner>.item>img{
+    height: 100vh;
+    width: 100vw;
+}
+@media screen and (max-width: 991px) {
+    #project-carousel>.carousel-inner>.item>img{
+        height: 100vh;
+        width: 100vw;
+    }
+  }
+.contact-me-section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-form-container{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.w-100{
+    width: 100%;
+}
+.p-1{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.carousel-caption{
+    font-size: 2em;
+}
+.project-title{
+    font-size: 1.3em;
+}
+.message-h{
+    height: 40%;
+}
+.gl-adj
+{
+    font-size: 1.4em;
+}
+.about-txt{
+    font-size: 1.2em;
+}

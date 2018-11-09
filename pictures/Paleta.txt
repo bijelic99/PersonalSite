@@ -1,0 +1,3 @@
+Glavna boja - #5652e1
+Logo, meni, i istaknute reci - #2a1868 (tamno plava)
+Sve belo - #ffffff
