@@ -43,6 +43,8 @@ html, body {
     display: block;
     padding: 0;
     margin: 0;
+    
+
 }
 .cover{
     height: 100vh;
@@ -82,6 +84,7 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
     
     
 }
@@ -196,10 +199,7 @@ html, body {
     height: 100vh;
     
 }
-#project-carousel>.carousel-inner>.item>img{
-    height: 100vh;
-    width: 100vw;
-}
+
 @media screen and (max-width: 991px) {
     #project-carousel>.carousel-inner>.item>img{
         height: 100vh;
@@ -243,4 +243,11 @@ html, body {
 }
 .about-txt{
     font-size: 1.2em;
+}
+.background-fix{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('../pictures/code-welcome-cover.jpg');
+    
 }
