@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-
+    
 
 
     $('#wrapper').fullpage({
@@ -31,15 +31,7 @@ $(document).ready(function () {
 
 });
 
-function fixMobile() {
 
-    var pr = window.parent.document;
-    $('meta', pr).attr('name', 'viewport');
-    $('meta', pr).attr('content', 'width=device-width');
-    $('meta', pr).attr('initial-scale', '1.0');
-    console.log(pr);
-
-}
 
 function navbarShowHide() {
     var scrollPos = 0;
@@ -73,6 +65,7 @@ function pageAnimations(origin, destination, direction) {
         
         
         doAnimation("#msg", "animated bounceIn");
+
     }
     console.log(origin.index)
 }
