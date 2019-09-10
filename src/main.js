@@ -5,9 +5,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faChevronDown, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookSquare, faWhatsapp, faGithubSquare, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faAngleDown)
+
+library.add(faAngleDown, faChevronDown, faMapMarkerAlt, faFacebookSquare, faWhatsapp, faGithubSquare, faLinkedinIn )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

@@ -1,10 +1,10 @@
 <template>
   <div class="greetBanner section flex-y">
       <div class="flex-8"></div>
-      <div class="flex-x flex-4"><p class="greetText">HI MY NAME IS DEJAN AND I AM A DEVELOPER FROM SERBIA</p></div>
-      <div class="flex-4"></div>
-      <div class="flex-x flex-2 arrow"><font-awesome-icon icon="angle-down" size="10x" class="arrowDown"/></div>
-      <div class="flex-2"></div>
+      <div class="flex-x flex-4"><p class="greetText mg-10">HI MY NAME IS DEJAN AND I AM A DEVELOPER FROM SERBIA</p></div>
+      <div class="flex-8"></div>
+      <div class="flex-x flex-2 arrow"><font-awesome-icon icon="chevron-down" size="8x" class="arrowDown"/></div>
+      
       
       
   </div>
@@ -32,6 +32,8 @@ export default {
     text-justify: distribute-all-lines;
     font-size: 2.8rem;
     font-weight: bolder;
+    color: white;
+    
 
   }
   .text-mg{
@@ -60,5 +62,11 @@ export default {
   .flex-8{
     flex: 8;
   }
-
+  .arrowDown{
+    color: white;
+  }
+  .mg-10{
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 </style>
