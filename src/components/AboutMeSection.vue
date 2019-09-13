@@ -2,108 +2,75 @@
   <div class="section aboutMeBackground">
     <b-container fluid>
       <b-row>
-        <b-col class="about-me-card" xl="6" lg="6" md="6" sm="12">
-          <!-- Redo this!!!!! -->
-          <b-container class="d-flex h-100">
-          <b-row align-v="center" align-h="center"  class="w-100">
-            <b-container  fluid class="w-100 d-flex">
-              <b-row align-h="center"  align-v="center" >
-                <b-col>
-                  <b-img
-                    class="profile-img"
-                    src="https://firebasestorage.googleapis.com/v0/b/personalsite-26924.appspot.com/o/profile-pic-sq.jpg?alt=media&token=e53ba702-78bf-4e5e-ba78-3f517a183bff"
-                    v-bind="mainProps"
-                    rounded="circle"
-                    alt="Circle image"
-                  ></b-img>
-                </b-col>
-              </b-row>
-              <b-row align-h="center"  align-v="center">
-                <b-col class="mt-4" align-self="center">
-                  <h2 class="name-text">Dejan Bijelic</h2>
-                </b-col>
-              </b-row>
-              <b-row align-h="center"  align-v="center"  >
-                <b-col class="mt-2" align-self="center">
-                  <b-container class="social-text">
-                    <b-row>
-                      <b-col class>
-                        <font-awesome-icon class="mr-4" icon="map-marker-alt" size="3x" />NOVI SAD, SERBIA
-                      </b-col>
-                    </b-row>
-                    <b-row>
-                      <b-col class="mt-1">
-                        <font-awesome-icon
-                          class="mr-4"
-                          :icon="['fab', 'facebook-square']"
-                          size="3x"
-                        />/BIJELIC99
-                      </b-col>
-                    </b-row>
-                    <b-row>
-                      <b-col class="mt-1">
-                        <font-awesome-icon class="mr-4" :icon="['fab', 'linkedin-in']" size="3x" />/DEJAN-BIJELIC
-                      </b-col>
-                    </b-row>
-                    <b-row>
-                      <b-col class="mt-1">
-                        <font-awesome-icon class="mr-4" :icon="['fab', 'github-square']" size="3x" />/BIJELIC99
-                      </b-col>
-                    </b-row>
-                  </b-container>
-                </b-col>
-              </b-row>
-            </b-container>
-          </b-row>
-          </b-container>
-          <!-- To here -->
+        <b-col class="about-me-card about-me-card-left" xl="6" lg="6" md="6" sm="12">
+          <div class="about-me-inner-cards-left left-inner-card-top">
+            <b-img
+              class="profile-img"
+              src="https://firebasestorage.googleapis.com/v0/b/personalsite-26924.appspot.com/o/profile-pic-sq.jpg?alt=media&token=e53ba702-78bf-4e5e-ba78-3f517a183bff"
+              v-bind="mainProps"
+              rounded="circle"
+              alt="Circle image"
+            ></b-img>
+          </div>
+          <div class="about-me-inner-cards-left left-inner-card-mid">
+            <h2 class="name-text">Dejan Bijelic</h2>
+          </div>
+          <div class="about-me-inner-cards-left left-inner-card-bottom">
+            <div class="social-links social-text">
+              <div>
+                <font-awesome-icon class icon="map-marker-alt" size="2x" />
+              </div>
+              <div>NOVI SAD, SERBIA</div>
+              <div>
+                <font-awesome-icon class :icon="['fab', 'facebook-square']" size="2x" />
+              </div>
+              <div>/BIJELIC99</div>
+              <div>
+                <font-awesome-icon class :icon="['fab', 'linkedin-in']" size="2x" />
+              </div>
+              <div>/DEJAN-BIJELIC</div>
+              <div>
+                <font-awesome-icon class :icon="['fab', 'github-square']" size="2x" />
+              </div>
+              <div>/BIJELIC99</div>
+            </div>
+          </div>
         </b-col>
-        <b-col class="about-me-card d-flex" xl="6" lg="6" md="6" sm="12">
-          <b-container  class="d-flex">
-          <b-row align-v="center">
-            <b-container>
-              <b-row>
-                <b-col >
-                  <b-container class="text-center">
-                    <b-row>
-                      <b-col align-self="center" class=" mb-4 "><h2 class="about-me-head">ABOUT ME</h2></b-col>
-                    </b-row>
-                    <b-row>
-                      <b-col align-self="center"><p class="text-left pl-5 about-me-text"> I am a student at University of Novi Sad, Serbia.
-                            My goal is to start my professional career by doing freelance work.
-
-                            I am familiar with quite a few technologies.
-                            <br>Some of them are:
-                            <ul class="text-left">
-                                <li>Java</li>
-                                <li>C#</li>
-                                <li>SQL(MySQL)</li>
-                                <li>CSS</li>
-                                <li>HTML</li>
-                                <li>JS</li>
-                                <li>PHP</li>
-                                <li>C</li>
-                            </ul>
-
-                            From technologies I mentioned above I have the most experience with Java(3 Years of
-                            experience) as well as C#(2 years) and SQL(2 years).
-
-
-
-                            <ul class="text-left">
-                                <li>-Using Java I have mastered smaller desktop apps that connect to database (MySQL)
-                                    and are used for managing data(Insert, Edit, Delete, etc...).</li>
-                                <li>-Using C# I have mostly used for ASP.Net Web Forms, MVC and also for Windows Forms.</li>
-                                <li> -As for HTML, CSS and JS that is area where I am a bit weaker but I know how to
-                                    use Bootstrap as well as JQuery.</li>
-                            </ul></p></b-col>
-                    </b-row>
-                  </b-container>
-                </b-col>
-              </b-row>
-            </b-container>
-          </b-row>
-          </b-container>
+        <b-col class="about-me-card about-me-card-right" xl="6" lg="6" md="6" sm="12">
+          <div class="about-me-inner-cards-right right-inner-card-top">
+            <h2 class="about-me-head text-center">ABOUT ME</h2>
+          </div>
+          <div class="about-me-inner-cards-right right-inner-card-bottom text-left about-me-text">
+            <p class="text-left about-me-text">
+            I am a student at University of Novi Sad, Serbia.
+            My goal is to start my professional career by doing freelance work.
+            I am familiar with quite a few technologies.
+            <br />
+Some of them are:
+            <ul class="text-left">
+              <li>Java</li>
+              <li>C#</li>
+              <li>SQL(MySQL)</li>
+              <li>CSS</li>
+              <li>HTML</li>
+              <li>JS</li>
+              <li>PHP</li>
+              <li>C</li>
+            </ul>From technologies I mentioned above I have the most experience with Java(3 Years of
+            experience) as well as C#(2 years) and SQL(2 years).
+            <ul class="text-left">
+              <li>
+                -Using Java I have mastered smaller desktop apps that connect to database (MySQL)
+                and are used for managing data(Insert, Edit, Delete, etc...).
+              </li>
+              <li>-Using C# I have mostly used for ASP.Net Web Forms, MVC and also for Windows Forms.</li>
+              <li>
+                -As for HTML, CSS and JS that is area where I am a bit weaker but I know how to
+                use Bootstrap as well as JQuery.
+              </li>
+            </ul>
+            </p>
+          </div>
         </b-col>
       </b-row>
     </b-container>
@@ -123,13 +90,47 @@ export default {
 
 <style>
 .aboutMeBackground {
-  background-image: url("../../pictures/line.png");
+  background-image: url("../../pictures/line.svg");
   background-repeat: repeat-y;
   background-size: contain;
   background-position: center center;
 }
 .about-me-card {
-  min-height: 100vh;
+  height: 100vh;
+  display: grid;
+}
+.about-me-card-left {
+  grid-template-columns: 2fr 5fr 1fr;
+  grid-template-rows: 2fr 3fr 1fr 4fr 2fr;
+  grid-row-gap: 1em;
+}
+.about-me-inner-cards-left {
+  grid-column: 2/3;
+}
+.left-inner-card-top {
+  grid-row: 2/3;
+  text-align: center;
+}
+.left-inner-card-mid {
+  grid-row: 3/4;
+}
+.left-inner-card-bottom {
+  grid-row: 4/5;
+  justify-self: center;
+}
+.about-me-card-right {
+  grid-template-columns: 1fr 5fr 2fr;
+  grid-template-rows: 2fr 2fr 6fr 2fr;
+  grid-row-gap: 1em;
+}
+.about-me-inner-cards-right {
+  grid-column: 2/3;
+}
+.right-inner-card-top {
+  grid-row: 2/3;
+}
+.right-inner-card-bottom {
+  grid-row: 3/4;
 }
 .profile-img {
   width: 16vw;
@@ -152,12 +153,19 @@ export default {
   font-weight: bolder;
   color: white;
 }
-.about-me-head{
+.social-links {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+}
+
+.about-me-head {
   font-weight: bolder;
   font-size: 2.4rem;
   color: white;
 }
-.about-me-text{
+.about-me-text {
   font-weight: bolder;
   font-size: 1.1rem;
   color: white;
@@ -165,6 +173,10 @@ export default {
 @media only screen and (max-width: 768px) {
   .aboutMeBackground {
     background-image: none;
+  }
+  .profile-img {
+    width: 36vw;
+    height: 36vw;
   }
 }
 </style>

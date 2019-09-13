@@ -1,0 +1,44 @@
+
+<svg   xmlns="http://www.w3.org/2000/svg">
+    <style type="text/css">
+        .my-element{
+            fill: white;
+            width: 5px;
+            height: 36px;
+            x: 50vw;
+            rx: 2px;
+            ry: 2px;
+            
+            
+            
+        }
+        
+        
+    </style>
+
+    
+    <rect y="0%" class="my-element"/>
+    <rect y="5%" class="my-element"/>
+    <rect y="10%" class="my-element"/>
+    <rect y="15%" class="my-element"/>
+    <rect y="20%" class="my-element"/>
+    <rect y="25%" class="my-element"/>
+    <rect y="30%" class="my-element"/>
+    <rect y="35%" class="my-element"/>
+    <rect y="40%" class="my-element"/>
+    <rect y="45%" class="my-element"/>
+    <rect y="50%" class="my-element"/>
+    <rect y="55%" class="my-element"/>
+    <rect y="60%" class="my-element"/>
+    <rect y="65%" class="my-element"/>
+    <rect y="70%" class="my-element"/>
+    <rect y="75%" class="my-element"/>
+    <rect y="80%" class="my-element"/>
+    <rect y="85%" class="my-element"/>
+    <rect y="90%" class="my-element"/>
+    <rect y="95%" class="my-element"/>
+    <rect y="100%" class="my-element"/>
+    
+    
+
+</svg>
