@@ -33,7 +33,7 @@ export default {
  }
  .section{
     
-    min-height: 100vh;
+    height: 100vh;
     
  }
 

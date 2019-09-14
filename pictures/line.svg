@@ -12,7 +12,9 @@
             
             
         }
-        
+        .end-element{
+            height: 18px;
+        }
         
     </style>
 
@@ -37,7 +39,7 @@
     <rect y="85%" class="my-element"/>
     <rect y="90%" class="my-element"/>
     <rect y="95%" class="my-element"/>
-    <rect y="100%" class="my-element"/>
+    
     
     
 

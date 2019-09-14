@@ -9,12 +9,15 @@ import { faAngleDown, faChevronDown, faMapMarkerAlt } from '@fortawesome/free-so
 import { faFacebookSquare, faWhatsapp, faGithubSquare, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 
-library.add(faAngleDown, faChevronDown, faMapMarkerAlt, faFacebookSquare, faWhatsapp, faGithubSquare, faLinkedinIn )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+library.add(faAngleDown, faChevronDown, faMapMarkerAlt, faFacebookSquare, faWhatsapp, faGithubSquare, faLinkedinIn )
+
+
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+
 
 new Vue({
   render: h => h(App),
