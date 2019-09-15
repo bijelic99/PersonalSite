@@ -4,7 +4,7 @@
         .my-element{
             fill: white;
             width: 5px;
-            height: 36px;
+            height: 3.6%;
             x: 50vw;
             rx: 2px;
             ry: 2px;

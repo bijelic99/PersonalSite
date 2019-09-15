@@ -20,7 +20,7 @@ export default {
 
 <style>
   .greetBanner{
-    background-image: url("../../pictures/duotone.png");
+    background-image: url("../../pictures/duotone-min.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

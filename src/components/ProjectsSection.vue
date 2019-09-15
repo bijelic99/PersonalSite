@@ -10,7 +10,7 @@
       background="#ababab"
       style="text-shadow: 1px 1px 2px #333;"
     >
-      <b-carousel-slide v-for="project in projects" :caption="project.projectName">
+      <b-carousel-slide v-for="project in projects" v-bind:key="project.id" :caption="project.projectName">
         <template v-slot:img>
           
             <img class="d-block img-fluid slide-img" :src="project.imageLink" />
@@ -41,11 +41,11 @@ export default {
         .get()
         .then(res => {
           res.forEach(doc => {
-            console.log(doc.data());
+            
             this.projects.push(doc.data());
           });
         })
-        .catch(err => console.log(err));
+        .catch(err =>{ console.log(err)});
     }
   },
   created() {
