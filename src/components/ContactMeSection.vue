@@ -10,7 +10,7 @@
           v-model="contactMeForm.name"
           type="text"
           required
-          placeholder="Enter your name"
+          placeholder="Enter your name..."
         ></b-form-input>
       </b-form-group>
       <b-form-group class="email-input-group" id="email-group" label-for="email-input">
@@ -19,7 +19,7 @@
           v-model="contactMeForm.email"
           type="email"
           required
-          placeholder="Enter your email address"
+          placeholder="Enter your email address..."
         ></b-form-input>
       </b-form-group>
       <b-form-group class="message-input-group" id="message-group" label-for="message-input">
@@ -79,7 +79,7 @@ export default {
     sendData(evt) {
       evt.preventDefault();
       //console.log(this.contactMeForm);
-      this.contactMeForm.created = firebase.firestore.Timestamp.now().seconds;
+      this.contactMeForm.created = firebase.firestore.Timestamp.now();
       firestore
         .collection("ContactMeFeedback")
         .add(this.contactMeForm)

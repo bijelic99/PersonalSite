@@ -3,7 +3,7 @@
       <div class="flex-8"></div>
       <div class="flex-x flex-4"><p class="greetText mg-10">HI MY NAME IS DEJAN AND I AM A DEVELOPER FROM SERBIA</p></div>
       <div class="flex-8"></div>
-      <div class="flex-x flex-2 arrow"><font-awesome-icon icon="chevron-down" size="8x" class="arrowDown"/></div>
+      <div class="flex-x flex-2 arrow"><font-awesome-icon icon="chevron-down" size="8x" class="arrowDown" v-scroll-to="'#aboutMeSection'"/></div>
       
       
       
@@ -65,6 +65,7 @@ export default {
   }
   .arrowDown{
     color: white;
+    cursor: pointer;
   }
   .mg-10{
     margin-left: 25%;
