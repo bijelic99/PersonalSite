@@ -5,17 +5,18 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faAngleDown, faChevronDown, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faChevronDown, faMapMarkerAlt, faBars } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookSquare, faWhatsapp, faGithubSquare, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 require('intersection-observer');
 import VueObserveVisibility from 'vue-observe-visibility'
 var VueScrollTo = require('vue-scrollto');
+import animateCss from 'animate.css'
 
 
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-library.add(faAngleDown, faChevronDown, faMapMarkerAlt, faFacebookSquare, faWhatsapp, faGithubSquare, faLinkedinIn )
+library.add(faAngleDown, faChevronDown, faMapMarkerAlt, faFacebookSquare, faWhatsapp, faGithubSquare, faLinkedinIn, faBars )
 
 
 
@@ -35,7 +36,7 @@ Vue.use(VueScrollTo, {
   x: false,
   y: true
 })
-
+Vue.use(animateCss)
 new Vue({
   render: h => h(App),
 }).$mount('#app')
