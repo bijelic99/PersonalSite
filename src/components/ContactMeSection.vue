@@ -1,5 +1,5 @@
 <template>
-  <div class="section contact-me-section">
+  <div class="section contact-me-section" v-bind:class="{'contact-me-section-h200': expandSection}">
     <div class="contact-me-section-head">
       <h1>Contact Me</h1>
     </div>
@@ -11,6 +11,8 @@
           type="text"
           required
           placeholder="Enter your name..."
+          @focus="inOutOfFocus(1)"
+          @blur="inOutOfFocus(0)"
         ></b-form-input>
       </b-form-group>
       <b-form-group class="email-input-group" id="email-group" label-for="email-input">
@@ -20,6 +22,8 @@
           type="email"
           required
           placeholder="Enter your email address..."
+          @focus="inOutOfFocus(1)"
+          @blur="inOutOfFocus(0)"
         ></b-form-input>
       </b-form-group>
       <b-form-group class="message-input-group" id="message-group" label-for="message-input">
@@ -30,6 +34,8 @@
           rows="10"
           max-rows="20"
           required
+          @focus="inOutOfFocus(1)"
+          @blur="inOutOfFocus(0)"
         ></b-form-textarea>
       </b-form-group>
       <b-button
@@ -59,6 +65,7 @@
 <script>
 import firestore from "./firebaseInit";
 import firebase from "firebase/app";
+import {scroller} from 'vue-scrollto/src/scrollTo'
 export default {
   name: "ContactMeSection",
   data() {
@@ -72,7 +79,9 @@ export default {
       showAlertSuccess: 0,
       showAlertFail: 0,
       showAlertTime: 4,
-      btnEnabled: true
+      btnEnabled: true,
+      expandSection: false
+      
     };
   },
   methods: {
@@ -107,6 +116,26 @@ export default {
       this.contactMeForm.message = "";
       this.contactMeForm.created = "";
     }
+    ,inOutOfFocus(isInFocus){
+      if(isInFocus === 1 && this.accessingFromPhone) this.expandSection=true
+      else { 
+        this.expandSection=false
+        
+      }
+      
+
+    }
+  },
+  computed: {
+    accessingFromPhone: function(){
+       return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    }
+  },
+  mounted() {
+    
+  },
+  watch: {
+      
   }
 };
 </script>
@@ -160,7 +189,7 @@ export default {
   border-radius: 6px !important;
   font-weight: bold !important;
   justify-self: center;
-  width: 16vw;
+  min-width: 16vw;
 }
 .button-submit:hover {
   background-color: white !important;
@@ -169,5 +198,45 @@ export default {
 .alert {
   grid-column: 1/3;
   grid-row: 5;
+}
+@media only screen and (max-width: 768px ) {
+  .contact-me-section{
+    grid-template-columns: 1fr;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+  .contact-me-section-head, .contact-me-section-form{
+    grid-column: 1;
+  }
+  .contact-me-section-form{
+    grid-column-gap: 4vw;
+    grid-template-rows: 1fr 1fr 1fr 4fr 1fr;
+  }
+  .button-submit{
+    justify-self: stretch;
+    align-self: stretch;
+    width: auto;
+    grid-row: 5;
+  }
+  .alert {
+  grid-column: 1/3;
+  grid-row: 1;
+  }
+.name-input-group{
+  grid-row: 2;
+  grid-column: 1/3;
+    
+}
+.email-input-group{
+  grid-row: 3;
+  grid-column: 1/3;
+  
+}
+.message-input-group{
+  grid-row: 4;
+}
+}
+.contact-me-section-h200{
+  height: 180vh !important;
 }
 </style>

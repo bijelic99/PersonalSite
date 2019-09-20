@@ -1,7 +1,7 @@
 <template>
-  <div ref="navBar" class="navbar-base navbar-wrapper" v-bind:class="{'navbar-background-transparent': !color,'navbar-background-blue': color }">
-    <div class="navbar-brand-custom" ><a href="#" v-scroll-to="'#greetSection'">DB</a></div>
-    <div ref="navbarWrapper" class="navbar-link-wrapper-custom navbar-link-custom" v-bind:class="[collapsableMenuActive ? 'animated' : '', menuOpen ? 'slideInRight' : 'slideOutRight' ]">
+  <div ref="navBar" class="navbar-base navbar-wrapper animated faster" v-bind:class="{'navbar-background-transparent': !color,'navbar-background-blue': color, 'slideInDown': navbarVisible, 'slideOutUp': !navbarVisible}">
+    <div class="navbar-brand-custom" ><a href="#" v-scroll-to="'#greetSection'"><img class="brand-image" src="../../pictures/logo_bela.svg" alt="DB"></a></div>
+    <div ref="navbarWrapper" class="navbar-link-wrapper-custom navbar-link-custom" v-bind:class="[(collapsableMenuActive ) ? 'animated' : '', menuOpen ? 'slideInRight' : 'slideOutRight', {'slideOutRight': !navbarVisible } ]">
         <a  href="#" v-scroll-to="'#greetSection'" v-bind:class="{active: greetSectionActive} ">Home</a>
         <a  href="#" v-scroll-to="'#aboutMeSection'" v-bind:class="{active: aboutMeSectionActive}">About me</a>
         <a  href="#" v-scroll-to="'#projectsSection'" v-bind:class="{active: projectsSectionActive}">Projects</a>
@@ -23,7 +23,9 @@ export default {
       menuOpen: false,
       collapsableMenuActive: false,
       windowWidth: 0,
-      windowHeight: 0
+      windowHeight: 0,
+      navbarVisible: true,
+      scrollLocation: -8000,
       
     }
   },
@@ -70,7 +72,8 @@ export default {
         
         this.collapsableMenuActive = false
      }
-    }
+    },
+    
     
     
   },
@@ -80,12 +83,12 @@ export default {
      
       window.addEventListener('resize', this.getWindowWidth);
       window.addEventListener('resize', this.getWindowHeight);
-
+      window.addEventListener('scroll', this.handleScrollEvent);
       
       this.getWindowWidth()
       this.getWindowHeight()
       
-    
+      this.scrollLocation = window.pageYOffset
     
   },
   computed: {
@@ -99,12 +102,27 @@ export default {
       else return 'slideOutRight'
   }},
   methods: {
-    getWindowWidth(event) {
+    getWindowWidth() {
         this.windowWidth = document.documentElement.clientWidth;
       },
 
-      getWindowHeight(event) {
+      getWindowHeight() {
         this.windowHeight = document.documentElement.clientHeight;
+      },
+      handleScrollEvent(){
+        
+        let scrollLoc = window.pageYOffset || document.documentElement.scrollTop
+        //console.log(`${this.scrollLocation} i ${scrollLoc}` )
+        if(this.greetSectionActive && !this.collapsableMenuActive) this.navbarVisible = true;
+        else if (scrollLoc > this.scrollLocation){
+          //console.log('dole')
+          this.navbarVisible = false;
+        }
+        else {
+          //console.log('gore')
+          this.navbarVisible = true;
+        }
+        this.scrollLocation = scrollLoc
       }
   },
   beforeDestroy() {
@@ -123,7 +141,8 @@ export default {
   border-bottom: solid;
   border-bottom-color: white;
   border-bottom-width: 0.1em;
-  z-index: 2;
+  z-index: 25;
+  transition: background-color 0.36s ease;
 }
 .navbar-wrapper {
   display: grid;
@@ -159,7 +178,7 @@ export default {
   align-items: center;
   justify-items: center;
   white-space: nowrap;
-  position: statoi;
+  position: static;
 }
 .navbar-link-custom>a {
   color: white;
@@ -171,6 +190,8 @@ export default {
 }
 .navbar-link-custom>a:link{
   color: white;
+  padding-top: auto;
+  padding-bottom: auto;
 }
 .navbar-link-custom>a:hover{
   color: #2a1868;
@@ -182,7 +203,7 @@ export default {
   color: #2a1868 !important;
 }
 .navbar-background-transparent{
-  background-color: transparent;
+  background-color: rgba(86, 82, 225, 0.36);
 }
 .navbar-background-blue{
   background-color: #5652e1;
@@ -194,13 +215,29 @@ export default {
   grid-column: 5;
   visibility: hidden;
 }
+.brand-image{
+  width: 1.2em;
+  display: block;
+  margin: auto;
+  
+}
+.invisible{
+  visibility: hidden;
+}
+  @media only screen and (max-width: 1366px ) {
+    .navbar-link-wrapper-custom{
+      grid-column-gap: 1vw;
+
+    }
+  }
+  
 @media only screen and (max-width: 992px) {
   :root{
     --nav-color: rgba(86, 82, 225, 1);
   }
   .navbar-base{
     
-    z-index: 40;
+    
     background-color: var(--nav-color);
   }
   .navbar-wrapper{
@@ -210,7 +247,7 @@ export default {
     
   }
   .navbar-link-wrapper-custom{
-    z-index: 1;
+    z-index: -55 !important;
     position: fixed;
     right: 0;
     height: 100vh;
@@ -221,7 +258,10 @@ export default {
     grid-auto-rows: minmax(min-content, max-content);
     grid-row-gap: 1vw;
     padding-top: 2vh;
-    
+    border-top-width: 0.1em;
+    border-top-color: white;
+    border-top-style: solid;
+    border-top-left-radius: 0.4em;
     border-left-width: 0.1em;
     border-left-style: solid;
     border-left-color: white;

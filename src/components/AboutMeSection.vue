@@ -1,8 +1,8 @@
 <template>
-  <div class="section aboutMeBackground">
-    <b-container fluid>
-      <b-row>
-        <b-col class="about-me-card about-me-card-left" xl="6" lg="6" md="6" sm="12">
+  <div class="section aboutMeBackground about-me-section">
+    
+        
+        <div class="about-me-card about-me-card-left">
           <div class="about-me-inner-cards-left left-inner-card-top">
             <b-img
               class="profile-img"
@@ -35,8 +35,8 @@
               <div>/BIJELIC99</div>
             </div>
           </div>
-        </b-col>
-        <b-col class="about-me-card about-me-card-right" xl="6" lg="6" md="6" sm="12">
+        </div>
+        <div class="about-me-card about-me-card-right">
           <div class="about-me-inner-cards-right right-inner-card-top">
             <h2 class="about-me-head text-center">ABOUT ME</h2>
           </div>
@@ -71,9 +71,9 @@ Some of them are:
             </ul>
             </p>
           </div>
-        </b-col>
-      </b-row>
-    </b-container>
+        </div>
+      
+    
   </div>
 </template>
 
@@ -94,6 +94,11 @@ export default {
   background-repeat: repeat-y;
   background-size: contain;
   background-position: center center;
+}
+.about-me-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 .about-me-card {
   height: 100vh;
@@ -167,16 +172,54 @@ export default {
 }
 .about-me-text {
   font-weight: bolder;
-  font-size: 1.1rem;
+  font-size: 1em;
   color: white;
 }
-@media only screen and (max-width: 768px) {
-  .aboutMeBackground {
+
+  
+  @media only screen and (max-width: 992px) {
+    .about-me-section{
+      height: 200vh !important;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .aboutMeBackground {
     background-image: none;
-  }
+    }
   .profile-img {
     width: 36vw;
     height: 36vw;
   }
-}
+   .about-me-card-left{
+     grid-column: 1;
+     grid-row: 1;
+     grid-template-columns: 1fr;
+     padding-left: 4vw;
+     padding-right: 4vw;
+
+   }
+   .about-me-inner-cards-left{
+     grid-column: 1;
+   }
+   .about-me-card-right{
+     grid-column: 1;
+     grid-row: 2;
+     grid-template-columns: 1fr;
+     padding-left: 4vw;
+     padding-right: 4vw;
+     overflow: hidden;
+     
+   }
+   @media only screen and (max-width: 768px ) {
+      .about-me-text{
+        font-size: 0.9em;
+      }
+      @media only screen and (max-width: 320px) and ( max-height: 620px ) {
+      .about-me-text{
+        font-size: 0.8em;
+      }
+    }
+    }
+  }
+
 </style>

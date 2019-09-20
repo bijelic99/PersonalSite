@@ -71,4 +71,17 @@ export default {
     margin-left: 25%;
     margin-right: 25%;
   }
+
+  @media only screen and (max-width: 767px ) {
+    .arrowDown{
+      font-size: 6em;
+    }
+    .greetText{
+      font-size: 1.6rem;
+    }
+    .mg-10{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  }
 </style>

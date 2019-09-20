@@ -27,6 +27,9 @@
         rootMargin: offsets
         },
       }" />
+      <div class="footer">
+
+      </div>
   </div>
 </template>
 
@@ -112,4 +115,5 @@ export default {
 .section {
   height: 100vh;
 }
+
 </style>
