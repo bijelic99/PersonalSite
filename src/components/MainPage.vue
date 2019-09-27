@@ -109,6 +109,7 @@ export default {
 <style>
 .mainPage {
   width: 100vw;
+  
   background-color: #5652e1;
   min-height: 100vh;
 }
