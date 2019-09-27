@@ -187,8 +187,14 @@ export default {
     background-image: none;
   }
   .profile-img {
-    width: 36vw;
-    height: 36vw;
+    width: 24vw;
+    height: 24vw;
+  }
+  .social-text{
+    font-size: 1em;
+  }
+  .name-text{
+    font-size: 1.4em;
   }
   .about-me-card-left {
     grid-column: 1;
@@ -208,10 +214,12 @@ export default {
     padding-right: 4vw;
     overflow: hidden;
   }
+  
   @media only screen and (max-width: 768px) {
     .about-me-text {
       font-size: 0.9em;
     }
+  
     @media only screen and (max-width: 320px) and (max-height: 620px) {
       .about-me-text {
         font-size: 0.8em;
