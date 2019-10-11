@@ -21,6 +21,11 @@ export default {
     viewportMetaTag.setAttribute("content", `height=${windowHeight}, width=${windowWidth}, initial-scale=1.0`)
     }
 
+  },
+  methods:{
+    track(){
+      this.$ga.page('/')
+    }
   }
 }
 </script>

@@ -13,7 +13,9 @@ var VueScrollTo = require('vue-scrollto');
 import animateCss from 'animate.css'
 import VueAnalytics from 'vue-analytics'
 
+Vue.config.productionTip = false
 
+const isProd = process.env.NODE_ENV === 'production'
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -40,7 +42,10 @@ Vue.use(VueScrollTo, {
 Vue.use(animateCss)
 Vue.use(VueAnalytics, {
   id: 'UA-149816616-1',
-  checkDuplicatedScript: true
+  debug:{
+    enabled: !isProd,
+    sendHitTask: isProd
+  }
 })
 
 new Vue({
