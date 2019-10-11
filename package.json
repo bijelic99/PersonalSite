@@ -20,6 +20,7 @@
     "firebase": "^6.6.1",
     "intersection-observer": "^0.7.0",
     "vue": "^2.6.10",
+    "vue-analytics": "^5.17.2",
     "vue-observe-visibility": "^0.4.4",
     "vue-scrollto": "^2.17.0"
   },

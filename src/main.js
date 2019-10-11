@@ -11,6 +11,7 @@ require('intersection-observer');
 import VueObserveVisibility from 'vue-observe-visibility'
 var VueScrollTo = require('vue-scrollto');
 import animateCss from 'animate.css'
+import VueAnalytics from 'vue-analytics'
 
 
 
@@ -37,6 +38,11 @@ Vue.use(VueScrollTo, {
   y: true
 })
 Vue.use(animateCss)
+Vue.use(VueAnalytics, {
+  id: 'UA-149816616-1',
+  checkDuplicatedScript: true
+})
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
