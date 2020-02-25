@@ -20,13 +20,28 @@ export default {
 
 <style>
   .greetBanner{
-    background-image: url("../../pictures/duotone-min.png");
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     image-rendering: optimizeSpeed;
     
 
+  }
+  @media (max-width: 1919px) {
+    .greetBanner{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/personalsite-26924.appspot.com/o/rsz_duotone-min-25-percent.png?alt=media&token=494e6d68-1c68-4953-8452-1defb091a5bb");
+    }
+  }
+  @media (max-width: 2754px) {
+    .greetBanner{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/personalsite-26924.appspot.com/o/rsz_1duotone-min-50-percent.png?alt=media&token=c9f75a47-121c-42bd-bb74-6b33cc38c318");
+    }
+  }
+  @media (min-width: 2755px){
+    .greetBanner{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/personalsite-26924.appspot.com/o/duotone-min.png?alt=media&token=b775340c-b5d6-45e7-bc4c-a12ff0e8198b");
+    }
   }
   .greetText{
     
@@ -44,7 +59,7 @@ export default {
   .flex-y{
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
   }
   .flex-x{
     display: flex;

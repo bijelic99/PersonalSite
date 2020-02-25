@@ -41,24 +41,15 @@
       <div class="about-me-inner-cards-right right-inner-card-bottom text-left about-me-text">
         <div class="text-left about-me-text">
           <p>
-          Motivated junior full stack developer with wide array of knowledge regarding programming technologies and concepts. Good communication skills.</p>
+          {{description.introduction}}</p>
           Technologies I am familiar with are:
           <ul>
-            <li>On the frontend:  <ul>
-              <li>JavaScript(Vue.js, JQuery)</li>
-              <li>HTML</li>
-              <li>CSS</li>
-            </ul></li>
-            <li>On the backend: <ul>
-              <li>Java</li>
-              <li>C#(ASP.NET)</li>
-              <li>PHP</li>
-              <li> MySQL</li>
-            </ul></li>
+            <li v-for="item in description.technologies" v-bind:key="item">
+              {{item}}
+            </li>
           </ul>
           <p>
-          Although I prefer backend I am not afraid of working on frontend as well.
-          I am very familiar with concepts of OOP and MVC.</p>
+          {{description.end}}</p>
         </div>
       </div>
     </div>
@@ -66,12 +57,30 @@
 </template>
 
 <script>
+import firestore from "./firebaseInit";
 export default {
   name: "AboutMeSection",
   data() {
     return {
-      mainProps: { blank: false, blankColor: "#777", class: "m1" }
+      mainProps: { blank: false, blankColor: "#777", class: "m1" },
+      technologies: [],
+      end: "",
+      description: {
+        introduction: "",
+        technologies: [],
+        end: ""
+      }
     };
+  },
+  methods:{
+    loadDescription: function(){
+      firestore.collection("DescriptionCollection").get().then(res=>{
+        this.description = res.docs[0].data()
+      })
+    }
+  },
+  mounted(){
+    this.loadDescription()
   }
 };
 </script>
@@ -171,9 +180,6 @@ export default {
   color: white;
 }
  .about-me-text>ul{
-   list-style-type: none;
- }
- .about-me-text>ul>li>ul{
    list-style-type: square;
  }
 

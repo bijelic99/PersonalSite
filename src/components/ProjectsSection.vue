@@ -44,8 +44,10 @@ export default {
             
             this.projects.push(doc.data());
           });
+          this.projects = this.projects.sort((i1, i2)=> i1.id > i2.id ? 1 : i2.id > i1.id ? -1 : 0)
         })
         .catch(err =>{ console.log(err)});
+        
     }
   },
   created() {
